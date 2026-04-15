@@ -15,8 +15,8 @@
      </de.grogra.pf.ui.registry.SourceDirectory>
     </ref>
     <ref name="meta">
-     <de.grogra.pf.registry.NodeReference name="Model" ref="866"/>
-     <de.grogra.pf.registry.NodeReference name="parameters" ref="867"/>
+     <de.grogra.pf.registry.NodeReference name="Model" ref="881"/>
+     <de.grogra.pf.registry.NodeReference name="parameters" ref="882"/>
     </ref>
    </ref>
   </ref>
