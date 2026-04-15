@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project xmlns="http://grogra.de/registry" graph="graph.xml">
- <import plugin="de.grogra.math" version="2.2.2"/>
- <import plugin="de.grogra.pf" version="2.2.2"/>
  <import plugin="de.grogra.imp" version="2.2.2"/>
+ <import plugin="de.grogra.math" version="2.2.2"/>
  <import plugin="de.grogra.imp3d" version="2.2.2"/>
+ <import plugin="de.grogra.pf" version="2.2.2"/>
  <import plugin="de.grogra.rgg" version="2.2.2"/>
  <registry>
   <ref name="project">
@@ -15,8 +15,8 @@
      </de.grogra.pf.ui.registry.SourceDirectory>
     </ref>
     <ref name="meta">
-     <de.grogra.pf.registry.NodeReference name="Model" ref="776"/>
-     <de.grogra.pf.registry.NodeReference name="parameters" ref="777"/>
+     <de.grogra.pf.registry.NodeReference name="Model" ref="851"/>
+     <de.grogra.pf.registry.NodeReference name="parameters" ref="852"/>
     </ref>
    </ref>
   </ref>
@@ -24,8 +24,8 @@
    <ref name="state">
     <de.grogra.pf.ui.registry.Layout name="layout">
      <de.grogra.pf.ui.registry.MainWindow>
-      <de.grogra.pf.ui.registry.Split location="0.47277486">
-       <de.grogra.pf.ui.registry.Split location="0.7971564" orientation="0">
+      <de.grogra.pf.ui.registry.Split location="0.47172776">
+       <de.grogra.pf.ui.registry.Split location="0.79620856" orientation="0">
         <de.grogra.pf.ui.registry.Split orientation="0">
          <de.grogra.pf.registry.Link source="/ui/panels/rgg/toolbar"/>
          <de.grogra.pf.ui.registry.PanelFactory source="/ui/panels/3d/defaultview">
