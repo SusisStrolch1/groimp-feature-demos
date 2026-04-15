@@ -1,0 +1,112 @@
+import de.grogra.ray.physics.Spectrum3d;
+
+const int N = 5;
+const int M = 10;
+
+protected void init() [
+	Axiom ==>
+		// SensorAreaGrid
+		[
+			Null(0,0,0.1)
+		    SensorAreaGrid(0.5, 1.0, N, M)  // 0.5m×0.5m, N×M cells
+		    //SensorAreaGrid(10,10, 0.05, 0.05)  // 10×10 cells, 0.05mx0.05m --> 50x50cm grid
+		]
+		// SensorNodeGrid
+		[
+			Null(0.5,0,0.1)
+		   SensorNodeGrid(0.5,1.0, N, M, 0.034)
+		]
+		
+		// ground 
+		[
+			Plane().(setShader(WHITE))
+		]
+		
+		[//spot light
+			Null(0.25,0,1.5)
+			RL(180) 
+			LightNode.(setLight(new SpotLight().(
+				setVisualize(true),	
+				setRaylength(1.3),
+				setPower(25),
+				setInnerAngle(0.17),
+				setOuterAngle(0.27))))
+		];
+]
+
+const int RAYS = 5000000;
+const int DEPTH = 2;
+
+
+public void run() {
+	clearConsole();
+	
+	LightModel LM = new LightModel(RAYS, DEPTH);
+    LM = new LightModel(RAYS, DEPTH);
+    LM.compute();
+    
+float[][] valsN = new float[N][M];
+float minN = 100000;
+float maxN = -1;
+float sumN = 0;
+    [
+        grid:SensorNodeGrid ::> {
+        	Spectrum3d[][] result = LM.getSensedIrradianceGrid(grid);
+        	float ri = 0;
+        	for (int i = 0; i < N; i++) {
+        		for (int j = 0; j < M; j++) {
+        			ri = result[i][j].integrate();
+        			valsN[i][j] = ri;
+        			if (ri>maxN) maxN = ri;
+        			if (ri<minN) minN = ri;
+        			sumN = sumN + ri;
+        			//println(String.format("N (%d, %d) = %.02f",i,j,ri));
+        		}
+        	}
+        	//println(String.format("N min=%.02f,  max=%.02f",minN,maxN));
+        	//colorize
+        	grid.setColorCell(valsN, new ColorGradient("jet", minN, maxN));
+        	grid.labelCell(valsN);
+        }
+    ]
+
+float[][] valsA = new float[N][M];
+float minA = 100000;
+float maxA = -1;
+float sumA = 0;
+	[
+        grid:SensorAreaGrid ::> {
+        	Spectrum3d[][] result = LM.getSensedIrradianceGrid(grid);
+        	int n = grid.getN ();
+        	int m = grid.getM ();
+        	float ri = 0;
+        	for (int i = 0; i < n; i++) {
+        		for (int j = 0; j < m; j++) {
+        			ri = result[i][j].integrate();
+        			valsA[i][j] = ri;
+        			if (ri>maxA) maxA = ri;
+        			if (ri<minA) minA = ri;
+        			sumA = sumA + ri;
+        		}
+        	}
+        	//println(String.format("A min=%.02f,  max=%.02f",minA,maxA));
+        	//colorize
+        	grid.setColorCell(valsA, new ColorGradient("jet", minA, maxA)); 
+        	grid.labelCell(valsA);
+        }
+    ]
+            	
+    println("i\t j\t SN\t SA\t");
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < M; j++) {
+        	println(String.format("%d\t %d\t %.02f\t %.02f\t",i,j,valsN[i][j],valsA[i][j]));
+        }
+	}
+	
+   	println(String.format("\t min =\t %.02f\t %.02f\t %.02f\t",minN,minA,minN/minA));
+   	println(String.format("\t max =\t %.02f\t %.02f\t %.02f\t",maxN,maxA,maxN/maxA));
+   	println(String.format("\t sum =\t %.02f\t %.02f\t %.02f\t",sumN,sumA,sumN/sumA));
+}
+
+
+

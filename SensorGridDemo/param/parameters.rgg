@@ -1,0 +1,6 @@
+// This file needs to be compiled (as a .rgg files), thus it can be imported in 
+// other .rgg files with "import <NAME_OF_THIS_FILE>. Notice that the path of 
+// the file is not considered (param/parameters.rgg) as all compiled files are 
+// seen as at the root of the project for the compilation.
+
+static int length = 1;
