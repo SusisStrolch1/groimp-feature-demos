@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project xmlns="http://grogra.de/registry" graph="graph.xml">
- <import plugin="de.grogra.pf" version="2.2.2"/>
  <import plugin="de.grogra.imp3d" version="2.2.2"/>
+ <import plugin="de.grogra.math" version="2.2.2"/>
+ <import plugin="de.grogra.pf" version="2.2.2"/>
  <import plugin="de.grogra.rgg" version="2.2.2"/>
  <import plugin="de.grogra.imp" version="2.2.2"/>
- <import plugin="de.grogra.math" version="2.2.2"/>
  <registry>
   <ref name="project">
    <ref name="objects">
@@ -15,8 +15,8 @@
      </de.grogra.pf.ui.registry.SourceDirectory>
     </ref>
     <ref name="meta">
-     <de.grogra.pf.registry.NodeReference name="Model" ref="986"/>
-     <de.grogra.pf.registry.NodeReference name="parameters" ref="987"/>
+     <de.grogra.pf.registry.NodeReference name="Model" ref="1016"/>
+     <de.grogra.pf.registry.NodeReference name="parameters" ref="1017"/>
     </ref>
    </ref>
   </ref>

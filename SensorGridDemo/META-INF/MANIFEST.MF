@@ -1,0 +1,13 @@
+
+Name: project.gs
+Content-Type: application/x-grogra-registry+xml
+
+Name: Model.rgg
+Content-Type: text/x-grogra-rgg; charset=UTF-8
+
+Name: param/parameters.rgg
+Content-Type: text/x-grogra-rgg; charset=UTF-8
+
+Name: graph.xml
+Content-Type: application/x-grogra-graph+xml
+

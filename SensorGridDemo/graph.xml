@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?><graph xmlns="http://grogra.de/xmlpersistence" xmlns:gx="http://grogra.de/xmlpersistence">
  <node root="MetaGraph" id="1" type="de.grogra.graph.impl.Node">
   <data gx:name="extentIndex" gx:value="7"/>
-  <node id="986" type="Model" edges="+">
+  <node id="1016" type="Model" edges="+">
    <data gx:name="extentIndex" gx:value="7"/>
    <object gx:name="initialTurtleState" color="14" length="100.0" diameter="0.1" tropism="0.0" parameter="0.0" carbon="0.0" heartwood="0.0" internodeCount="0"/>
   </node>
-  <node id="987" type="parameters" edges="+">
+  <node id="1017" type="parameters" edges="+">
    <data gx:name="extentIndex" gx:value="7"/>
    <object gx:name="initialTurtleState" color="14" length="100.0" diameter="0.1" tropism="0.0" parameter="0.0" carbon="0.0" heartwood="0.0" internodeCount="0"/>
   </node>
  </node>
  <node root="TypeGraph" id="26" type="de.grogra.graph.impl.Node">
   <data gx:name="extentIndex" gx:value="7"/>
-  <node id="990" type="de.grogra.rgg.multiscale.TypeRoot" edges="/">
+  <node id="1020" type="de.grogra.rgg.multiscale.TypeRoot" edges="/">
    <data gx:name="extentIndex" gx:value="8"/>
-   <node id="992" type="de.grogra.rgg.multiscale.TypeAxiom" edges="/">
+   <node id="1022" type="de.grogra.rgg.multiscale.TypeAxiom" edges="/">
     <data gx:name="extentIndex" gx:value="8"/>
    </node>
   </node>
-  <node id="991" type="de.grogra.rgg.SRoot" edges="+">
+  <node id="1021" type="de.grogra.rgg.SRoot" edges="+">
    <data gx:name="extentIndex" gx:value="8"/>
   </node>
  </node>
  <node root="MainGraph" id="0" type="de.grogra.graph.impl.Node">
   <data gx:name="extentIndex" gx:value="7"/>
-  <node id="988" type="de.grogra.rgg.RGGRoot" edges="+">
-   <node id="997" type="de.grogra.imp3d.objects.Null" edges="+">
+  <node id="1018" type="de.grogra.rgg.RGGRoot" edges="+">
+   <node id="1027" type="de.grogra.imp3d.objects.Null" edges="+">
     <object gx:name="transform" gx:type="de.grogra.math.TVector3d" gx:value="0.25 0.0 1.5"/>
-    <node id="998" type="de.grogra.turtle.RL" edges="-">
+    <node id="1028" type="de.grogra.turtle.RL" edges="-">
      <data gx:name="angle" gx:value="180.0"/>
-     <node id="999" type="de.grogra.imp3d.objects.LightNode" edges="-">
+     <node id="1029" type="de.grogra.imp3d.objects.LightNode" edges="-">
       <object gx:name="light" gx:type="de.grogra.imp3d.objects.SpotLight">
        <object gx:name="color" gx:value="false 1.0 1.0 1.0"/>
        <data gx:name="shadowless" gx:value="false"/>
@@ -47,21 +47,21 @@
      </node>
     </node>
    </node>
-   <node id="1000" type="de.grogra.imp3d.objects.Plane" edges="+">
+   <node id="1030" type="de.grogra.imp3d.objects.Plane" edges="+">
     <object gx:name="shader" gx:type="de.grogra.imp3d.shading.RGBAShader" gx:value="true 28"/>
    </node>
-   <node id="995" type="de.grogra.imp3d.objects.Null" edges="+">
+   <node id="1025" type="de.grogra.imp3d.objects.Null" edges="+">
     <object gx:name="transform" gx:type="de.grogra.math.TVector3d" gx:value="0.5 0.0 0.1"/>
-    <node id="996" type="de.grogra.imp3d.objects.SensorNodeGrid" edges="-">
+    <node id="1026" type="de.grogra.imp3d.objects.SensorNodeGrid" edges="-">
      <data gx:name="xDim" gx:value="0.5"/>
      <data gx:name="n" gx:value="5"/>
      <data gx:name="m" gx:value="10"/>
      <data gx:name="radius" gx:value="0.034"/>
     </node>
    </node>
-   <node id="993" type="de.grogra.imp3d.objects.Null" edges="+">
+   <node id="1023" type="de.grogra.imp3d.objects.Null" edges="+">
     <object gx:name="transform" gx:type="de.grogra.math.TVector3d" gx:value="0.0 0.0 0.1"/>
-    <node id="994" type="de.grogra.imp3d.objects.SensorAreaGrid" edges="-">
+    <node id="1024" type="de.grogra.imp3d.objects.SensorAreaGrid" edges="-">
      <data gx:name="xDim" gx:value="0.5"/>
      <data gx:name="n" gx:value="5"/>
      <data gx:name="m" gx:value="10"/>
